@@ -1,4 +1,4 @@
-# ![JSS]("https://raw.githubusercontent.com/manikandan-ramar/javascript-switch/master/icons/icon128.png") Javascript Switch
+# ![JSS](/icons/icon48.png) Javascript Switch
 
 ## Chrome/Edge Extension
 
