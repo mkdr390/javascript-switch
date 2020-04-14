@@ -9,7 +9,7 @@
        "128": "icons/icon128.png"
     },
     "minimum_chrome_version": "16",
-    "homepage_url": "https://github.com/manikandan-ramar",
+    "homepage_url": "https://manikandan-ramar.github.io/javascript-switch",
     "permissions": [
         "tabs",
         "contentSettings"
