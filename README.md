@@ -1,4 +1,4 @@
-# ![JSS](/icons/icon48.png) Javascript Switch
+# ![JSS](/icons/icon16.png) &middot; Javascript Switch
 
 ## Chrome/Edge Extension
 
