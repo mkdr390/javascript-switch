@@ -28,20 +28,35 @@ function updateCurrentState() {
         var url = currentTab.url;
         var incognito = currentTab.incognito;
 
-        chromeSettings.javascript.get({
-            primaryUrl: url,
-            incognito: incognito
-        }, function (data) {
-            var state = data.setting;
+        if (url) {
+            var fileUrl = /^file:/.test(url);
+            var newResourseName = url.match(extractHostname);
 
-            changeIconAs(actualState[state]);
-        })
+            if (fileUrl || !!newResourseName && newResourseName[0])
+                chromeSettings.javascript.get({
+                    primaryUrl: url,
+                    incognito: incognito
+                }, function (data) {
+                    var state = data.setting;
+
+                    changeIconAs(actualState[state]);
+                });
+            else
+                changeIconAs(actualState['inactive']);
+        } else
+            changeIconAs(actualState['inactive']);
     }
 }
 
 function initialize() { getCurrentTab(updateCurrentState); }
 
 chrome.tabs.onActivated.addListener(initialize);
+
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+    if (changeInfo.status == "loading" && tab.selected)
+        initialize();
+});
+
 chrome.windows.getCurrent(initialize);
 
 function changeJSState() {
@@ -49,6 +64,7 @@ function changeJSState() {
         var url = currentTab.url;
         var incognito = currentTab.incognito;
 
+        if (url)
         chromeSettings.javascript.get({
             primaryUrl: url,
             incognito: incognito
@@ -57,8 +73,16 @@ function changeJSState() {
 
             if (state) {
                 var newState = state == 'allow' ? 'block' : 'allow';
-                var pattern = /^file:/.test(url) ? url : url.match(extractHostname)[0] + '/*';
+                var pattern = "";
 
+                if (/^file:/.test(url))
+                    pattern = url;
+                else {
+                    var newResourseName = url.match(extractHostname);
+                    pattern = !!newResourseName && newResourseName[0] + '/*';
+                }
+
+                if (pattern)
                 chromeSettings.javascript.set(
                     {
                         primaryPattern: pattern,
