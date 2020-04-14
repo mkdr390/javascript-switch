@@ -14,19 +14,16 @@ function changeIconAs(thisState) {
     });
 }
 
-function getCurrentTab() {
-
+function getCurrentTab(callback) {
     chrome.tabs.query({
-        'active': true,
-        'windowId': chrome.windows.WINDOW_ID_CURRENT
+        'active': true
     }, function(tabs) {
         currentTab = tabs[0];
+        callback();
     });
 }
 
-function initialize() {
-    getCurrentTab();
-
+function updateCurrentState() {
     if (currentTab) {
         var url = currentTab.url;
         var incognito = currentTab.incognito;
@@ -42,27 +39,12 @@ function initialize() {
     }
 }
 
-chrome.tabs.onUpdated.addListener(function (tabId, props, tab) {
-    if (props.status == "loading" && tab.selected) {
-      initialize();
-    }
-  });
+function initialize() { getCurrentTab(updateCurrentState); }
 
-  chrome.tabs.onHighlighted.addListener(function () {
-    initialize();
-  });
+chrome.tabs.onActivated.addListener(initialize);
+chrome.windows.getCurrent(initialize);
 
-  chrome.windows.onFocusChanged.addListener(function () {
-    initialize();
-  });
-
-  chrome.windows.getCurrent(function () {
-    initialize();
-  });
-
-function toggleJS() {
-    getCurrentTab();
-
+function changeJSState() {
     if (currentTab) {
         var url = currentTab.url;
         var incognito = currentTab.incognito;
@@ -93,5 +75,7 @@ function toggleJS() {
         })
     }
 }
+
+function toggleJS() { getCurrentTab(changeJSState); }
 
 chrome.browserAction.onClicked.addListener(toggleJS);
