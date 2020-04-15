@@ -14,6 +14,11 @@
                 margin: 0 auto;
                 text-align: center;
             }
+
+            .title-container {
+                box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+            }
+
             .titleWrapper {
                 display: inline-block;
             }
@@ -33,22 +38,123 @@
             }
 
             .descriptionWrapper {
+                display: flex;
+                padding: 30px 10px;
+                border-bottom: 1px solid #dadce0;
+            }
+
+            .desImageWrapper {
+
+            }
+
+            .desImage {
+                width: 150px;
+            }
+
+            .desCon {
+                text-align: left;
+                padding-left: 30px;
+            }
+
+            .donate {
+                padding: 10px;
+            }
+
+            .footer {
+                padding: 30px;
+            }
+
+            .copyright {
+                border-top: 1px solid #dadce0;
+                padding: 10px;
+                color: #8c8d8d;
+            }
+
+            @media screen and (max-width: 460px) {
+                .descriptionWrapper {
+                    flex-direction: column;
+                }
             }
         </style>
     </head>
     <body>
         <div class="app-container" >
-            <div class="titleWrapper" >
-                <img class="logo" src="icons/icon48.png" />
-                <h1 class="title" >Javascript Switch</h1>
+            <div class="title-container" >
+                <div class="titleWrapper" >
+                    <img class="logo" src="icons/icon48.png" />
+                    <h1 class="title" >Javascript Switch</h1>
+                </div>
             </div>
             <div class="descriptionWrapper" >
-                <h3>💎 Chrome/Edge Extension</h3>
-                <div>
-                    Developers and Users can switch JavaScript ON/OFF
-                    <div class="list" >To block vulnerable JavaScript programs and</div>
-                    <div class="list" >To test accessibility of the website</div>
+                <div class="desImageWrapper" >
+                    <img class="desImage" src="images/extension.jpg" />
                 </div>
+                <div class="desCon" >
+                    <h3>💎 Chrome/Edge Extension</h3>
+                    <div>
+                        Developers and Users can switch JavaScript ON/OFF
+                        <div class="list" >- To block vulnerable JavaScript programs and</div>
+                        <div class="list" >- To test accessibility of the website</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="descriptionWrapper">
+                <div class="desImageWrapper" >
+                    <img class="desImage" src="images/platforms.jpg" />
+                </div>
+                <div class="desCon" >
+                    <h3>🔮 Platforms Available</h3>
+                    <div>
+                        <div class="list" >- On <a href="https://microsoftedge.microsoft.com/addons/" target="_blank" >Microsoft Store</a> for Edge Browsers.</div>
+                        <div class="list" >- On <a href="https://chrome.google.com/webstore/" target="_blank" >Chrome Web Store</a> for Chrome Browsers.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="descriptionWrapper">
+                <div class="desImageWrapper" >
+                    <img class="desImage" src="images/nojs.jpg" />
+                </div>
+                <div class="desCon" >
+                    <h3>🌄 World without Javascript</h3>
+                    <div>
+                        When you switch off the javascript for a website, you will enter into a new world with
+                        <div class="list" >- No ads</div>
+                        <div class="list" >- No endless scrolling</div>
+                        <div class="list" >- No Pop up</div>
+                        <div class="list" >- No Cookies</div>
+                        <div class="list" >- No Local Storage</div>
+                        It means no data storing and sharing with advertisers and third party vulnerable programs. Enter into this new world of websites with Javascript Switch.    
+                    </div>
+                </div>
+            </div>
+
+            <div class="descriptionWrapper">
+                <div class="desCon" >
+                    <h3>😘 In Love with this ultimate extension?</h3>
+                    <div>
+                        <div class="list" >If this extention saves your time and you are really in love with it, then please consider donating to help things rolling faster!</div>
+                    </div>
+                    <a href="https://www.paypal.me/ManikandanRamar1" target="_blank" >
+                        <img class="donate" src="images/donate.jpg" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer" >
+                Javascript Switch is built and maintained by
+                <a href="https://manikandan-ramar.github.io" target="_blank">
+                    Manikandan Ramar
+                </a>
+                on
+                <a href="https://github.com/manikandan-ramar/javascript-switch" target="_blank">
+                    GitHub
+                </a>
+            </div>
+
+            <div class="copyright" >
+                © 2020 Manikandan Ramar
             </div>
         </div>
     </body>
