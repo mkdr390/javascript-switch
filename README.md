@@ -26,7 +26,7 @@ If this extention saves your time and you are really in love with it, then pleas
 
 <a href="https://www.paypal.me/ManikandanRamar1" target="_blank" ><img src="https://raw.githubusercontent.com/manikandan-ramar/javascript-switch/master/images/donate.jpg" alt="DONATE" /></a>
 
-[ms-store-link]:https://microsoftedge.microsoft.com/addons/
+[ms-store-link]:https://microsoftedge.microsoft.com/addons/detail/cmdcconnebecmnehjjddjgoanaiilene
 [chrome-store-link]:https://chrome.google.com/webstore/
 
 Thank You!
