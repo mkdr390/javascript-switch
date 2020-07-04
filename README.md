@@ -22,9 +22,8 @@ It means no data storing and sharing with advertisers and third party vulnerable
 - On [Chrome Web Store][chrome-store-link] for Chrome Browsers.
 
 ## 😘 In Love with this ultimate extension?
-If this extention saves your time and you are really in love with it, then please consider donating to help things rolling faster!
+If this extention saves your time and you are really in love with it, then please rate the extention.
 
-<a href="https://www.paypal.me/ManikandanRamar1" target="_blank" ><img src="https://raw.githubusercontent.com/manikandan-ramar/javascript-switch/master/images/donate.jpg" alt="DONATE" /></a>
 
 [ms-store-link]:https://microsoftedge.microsoft.com/addons/detail/cmdcconnebecmnehjjddjgoanaiilene
 [chrome-store-link]:https://chrome.google.com/webstore/
