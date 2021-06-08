@@ -18,8 +18,10 @@ function getCurrentTab(callback) {
     chrome.tabs.query({
         'active': true
     }, function(tabs) {
-        currentTab = tabs[0];
-        callback();
+        if (tabs && tabs.length) {
+            currentTab = tabs[0];
+            callback();
+        }
     });
 }
 
