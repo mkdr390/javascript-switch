@@ -22,7 +22,7 @@ It means no data storing and sharing with advertisers and third party vulnerable
 - On [Chrome Web Store][chrome-store-link] for Chrome Browsers.
 
 ## 😘 In Love with this ultimate extension?
-If this extention saves your time and you are really in love with it, then please rate the extention.
+If this extention saves your time and you are really in love with it, then please rate ⭐ and write review ✍ for my extension.
 
 
 [ms-store-link]:https://microsoftedge.microsoft.com/addons/detail/cmdcconnebecmnehjjddjgoanaiilene
