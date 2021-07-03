@@ -16,9 +16,12 @@ function changeIconAs(thisState) {
 
 function getCurrentTab(callback) {
     chrome.tabs.query({
-        'active': true
+        'active': true,
+        'windowId': chrome.windows.WINDOW_ID_CURRENT
     }, function(tabs) {
-        if (tabs && tabs.length) {
+        if (chrome.runtime.lastError) {
+            window.setTimeout(() => getCurrentTab(callback), 100);
+          } else if (tabs && tabs.length) {
             currentTab = tabs[0];
             callback();
         }
