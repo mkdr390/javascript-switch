@@ -26,7 +26,7 @@ If this extention saves your time and you are really in love with it, then pleas
 
 
 [ms-store-link]:https://microsoftedge.microsoft.com/addons/detail/cmdcconnebecmnehjjddjgoanaiilene
-[chrome-store-link]:https://chrome.google.com/webstore/
+[chrome-store-link]:https://chrome.google.com/webstore/detail/javascript-switch/fopnmaooogcdcnofegdbcgfbgpkhgoae
 
 Thank You!
 
