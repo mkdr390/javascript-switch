@@ -9,7 +9,7 @@
        "128": "icons/icon128.png"
     },
     "minimum_chrome_version": "16",
-    "homepage_url": "https://manikandanramar.github.io/javascript-switch",
+    "homepage_url": "https://mkdr390.github.io/javascript-switch",
     "permissions": [
         "tabs",
         "contentSettings"
