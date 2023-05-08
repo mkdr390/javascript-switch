@@ -1,26 +1,23 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "JavaScript Switch",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Developers and users can switch JavaScript ON/OFF to block vulnerable JavaScript programs and test accessibility of the website",
     "icons": {
         "16": "icons/icon16.png",
         "48": "icons/icon48.png",
        "128": "icons/icon128.png"
     },
-    "minimum_chrome_version": "16",
+    "minimum_chrome_version": "88",
     "homepage_url": "https://mkdr390.github.io/javascript-switch",
     "permissions": [
         "tabs",
         "contentSettings"
     ],
     "background": {
-        "scripts": [
-            "js/main.js"
-        ],
-        "persistent": false
+        "service_worker": "js/main.js"
     },
-    "browser_action": {
+    "action": {
         "default_icon"	: "icons/icon-enabled.png"
     }
 

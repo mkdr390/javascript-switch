@@ -9,8 +9,8 @@ var actualState = {
 
 // state = enabled/disabled/na
 function changeIconAs(thisState) {
-    chrome.browserAction.setIcon({
-        path: 'icons/icon-' + thisState + '.png'
+    chrome.action.setIcon({
+        path: '/icons/icon-' + thisState + '.png'
     });
 }
 
@@ -107,4 +107,4 @@ function changeJSState() {
 
 function toggleJS() { getCurrentTab(changeJSState); }
 
-chrome.browserAction.onClicked.addListener(toggleJS);
+chrome.action.onClicked.addListener(toggleJS);
